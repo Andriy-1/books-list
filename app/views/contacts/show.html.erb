@@ -1,0 +1,22 @@
+<h1>Інформація про контакт</h1>
+<div>
+<table class="contact-table">
+    <tr>
+        <th colspan="2">Контактна інформація</th>
+    </tr>
+    <tr>
+        <td>Ім'я:</td>
+        <td><%= @contact.name %></td>
+    </tr>
+    <tr>
+        <td>Телефон:</td>
+        <td> <%= @contact.phone %></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td><%= @contact.email %></td>
+    </tr>
+</table>
+</div>
+<br/>
+<%= link_to 'Назад до списку', contacts_path %>

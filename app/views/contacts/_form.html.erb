@@ -1,0 +1,27 @@
+<div class="container">
+<%= form_with(model: @contact, local: true) do |form| %>
+	<div >
+	<strong>  <%= form.label :name %> </strong>
+	  <%= form.text_field :name %>
+	  <%= display_errors(form.object.errors[:name], class: 'error') %>
+
+	</div>
+	<br/>
+	<div >
+	 <strong> <%= form.label :phone %></strong>
+	  <%= form.text_field :phone %>
+	  <%= display_errors(form.object.errors[:phone], class: 'error') %>
+	</div>
+    <br/>
+	<div >
+	<strong>  <%= form.label :email %> </strong>
+	  <%= form.text_field :email %>
+	  <%= display_errors(form.object.errors[:email], class: 'error') %>
+	</div>
+    <br/>
+	<div>
+	  <%= form.submit 'Зберегти' %>
+	</div>
+  <% end %>
+  
+</div>

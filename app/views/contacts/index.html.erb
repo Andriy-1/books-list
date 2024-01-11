@@ -1,0 +1,29 @@
+<h1>Список контактів</h1>
+
+<table class="contact-table">
+<tr>
+<th>Ім'я</th>
+<th>Телефон</th>
+<th>Email</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+
+<% @contacts.each do |contact| %>
+<tr>
+  <td><%= contact.name %></td>
+  <td><%= contact.phone %></td>
+  <td><%= contact.email %></td>
+  <td><%= link_to 'Показати', contact %></td>
+  <td><%= link_to 'Редагувати', edit_contact_path(contact) %></td>
+  <td>
+  <%= form_with model: contact, method: :delete, remote: true, data: { confirm: 'Ви впевнені?' }, class: 'delete-task' do |form| %>
+	<%= form.submit 'Видалити' %>
+  <% end %>
+  </td>
+</tr>
+<% end %>
+</table>
+<br/>
+<%= link_to 'Додати новий контакт', new_contact_path %>
