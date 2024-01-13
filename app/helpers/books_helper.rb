@@ -1,2 +1,2 @@
-module BookssHelper
+module BooksHelper
 end
