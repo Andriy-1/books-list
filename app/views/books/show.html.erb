@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Назва:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Автор:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Опис:</strong>
+  <%= @book.description %>
+</p>
+
+<%= link_to 'Редагувати', edit_book_path(@book) %> |
+<%= link_to 'Назад', books_path %>

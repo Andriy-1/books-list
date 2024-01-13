@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-	resources :contacts
-	root 'contacts#index'
+	resources :books
+	root 'books#index'
   end

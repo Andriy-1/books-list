@@ -1,0 +1,26 @@
+
+<%= form_with(model: @book, local: true) do |form| %>
+	<div >
+	<strong>  <%= form.label :title %> </strong>
+	  <%= form.text_field :title %>
+	  <%= display_errors(form.object.errors[:title], class: 'error') %>
+
+	</div>
+	<br/>
+	<div >
+	 <strong> <%= form.label :author %></strong>
+	  <%= form.text_field :author %>
+	  <%= display_errors(form.object.errors[:author], class: 'error') %>
+	</div>
+    <br/>
+	<div >
+	<strong>  <%= form.label :description %> </strong>
+	  <%= form.text_field :description %>
+	  <%= display_errors(form.object.errors[:description], class: 'error') %>
+	</div>
+    <br/>
+	<div>
+	  <%= form.submit 'Зберегти' %>
+	</div>
+  <% end %>
+  
